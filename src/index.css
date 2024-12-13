@@ -1,0 +1,13 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom dropdown styling */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+body {
+  overflow-y: auto; 
+  overflow-x: hidden; 
+}

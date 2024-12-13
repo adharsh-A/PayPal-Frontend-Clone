@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BayPal Webpage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Custom dropdown styling */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <!-- Header -->
+  <header class="bg-white border-b">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center space-x-2">
+        <img src="https://placehold.co/120x40" alt="BayPal logo" class="h-10">
+      </div>
+      <nav class="flex space-x-8">
+        <!-- Dropdown Menu for INDIVIDUAL -->
+        <div class="relative dropdown">
+          <a href="#" class="text-sm text-gray-700">INDIVIDUAL</a>
+          <div class="absolute z-10 left-0 top-4 mt-2 w-48 bg-white border rounded-lg shadow-lg dropdown-menu hidden">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personal Account</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BayPal Credit</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Security</a>
+          </div>
+        </div>
+
+        <!-- Dropdown Menu for BUSINESS -->
+        <div class="relative dropdown">
+          <a href="#" class="text-sm text-gray-700">BUSINESS</a>
+          <div class="absolute z-10 left-0 mt-2 w-48 top-4 bg-white border rounded-lg shadow-lg dropdown-menu hidden">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Merchant Services</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Business Account</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Payment Solutions</a>
+          </div>
+        </div>
+
+        <!-- Dropdown Menu for PARTNERS -->
+        <div class="relative dropdown">
+          <a href="#" class="text-sm text-gray-700">PARTNERS</a>
+          <div class="absolute  z-10 left-0 mt-2 top-4 w-48 bg-white border rounded-lg shadow-lg dropdown-menu hidden">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Partner Program</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Developer Tools</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Integration Services</a>
+          </div>
+        </div>
+
+        <!-- Dropdown Menu for USEFUL INFO -->
+        <div class="relative dropdown">
+          <a href="#" class="text-sm text-gray-700">USEFUL INFO</a>
+          <div class="absolute z-10 left-0 top-4 mt-2 w-48 bg-white border rounded-lg shadow-lg dropdown-menu hidden">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Fees</a>
+          </div>
+        </div>
+      </nav>
+      <div class="space-x-4">
+        <button class="text-blue-600 border border-blue-600 px-4 py-2 rounded-md" onclick="window.location.href='login.html'">Log In</button>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-md" onclick="window.location.href='signup.html'">Sign Up</button>
+      </div>
+    </div>
+  </header>
+  <section class="bg-gray-50">
+    <div class="container mx-auto flex items-center justify-between py-16 px-6">
+      <div class="max-w-md">
+        <h1 class="text-4xl font-bold text-gray-800">Sell just about anywhere in the world.</h1>
+        <p class="text-lg text-gray-600 mt-4">Whether you have an online shop or need to accept payments remotely, we can help you get paid fast.</p>
+        <div class="mt-6 space-x-2 flex">
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-md" onclick="window.location.href='signup.html'">Sign Up</button>
+          <button class="border border-blue-600 text-blue-600 px-4 py-2 rounded-md">Connect With Us</button>
+        </div>
+      </div>
+  
+      <!-- Carousel Container -->
+      <div class="relative w-full max-w-lg">
+        <div class="carousel overflow-hidden rounded-lg">
+          <div class="slides flex transition-transform duration-500 ease-out">
+            <img src="https://placehold.co/500x300" alt="Business person working on laptop" class="w-full object-cover">
+            <img src="https://placehold.co/500x300?text=Image+2" alt="Another business scenario" class="w-full object-cover">
+            <img src="https://placehold.co/500x300?text=Image+3" alt="PayPal services" class="w-full object-cover">
+          </div>
+        </div>
+        <!-- Previous/Next Controls -->
+        <button id="prevBtn" class="absolute top-1/2 left-0 transform -translate-y-1/2  text-white px-3 py-1 rounded-full">
+          &#9664;
+        </button>
+        <button id="nextBtn" class="absolute top-1/2 right-0 transform -translate-y-1/2  text-white px-3 py-1 rounded-full">
+          &#9654;
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Business Solutions Section -->
+  <section class="bg-blue-900 text-white py-10">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <p class="text-lg">Looking for BayPal Business Solutions? Across regions and around the world, we are here to support you.</p>
+      <button class="bg-white text-blue-900 px-2 py-1 rounded-md">BayPal for business</button>
+    </div>
+  </section>
+
+  <!-- Feature Cards Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold text-center">Find more ways to shop with BayPal for you.</h2>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 ">
+        <div class="text-center">
+          <img src="https://placehold.co/200x150" alt="People shopping online" class="mx-auto">
+          <h3 class="text-lg font-semibold mt-4">The world is your shopping mall.</h3>
+          <p class="text-gray-600 mt-2">From big brands to little boutiques, you can shop safely at over millions of online stores with BayPal.</p>
+          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md">Shop Now</button>
+        </div>
+        <div class="text-center">
+          <img src="https://placehold.co/200x150" alt="Person holding credit card" class="mx-auto">
+          <h3 class="text-lg font-semibold mt-4">Pay with your preferred card.</h3>
+          <p class="text-gray-600 mt-2">Link all your cards and choose which one to use at checkout. Shopping online has never been this easy.</p>
+          <button class="mt-4 border text-white bg-blue-600 text-blue-600 px-4 py-2 rounded-md">Link a Card Now</button>
+        </div>
+        <div class="text-center h-fit">
+          <img src="https://placehold.co/200x150" alt="Person packing shipment" class="mx-auto">
+          <h3 class="text-lg font-semibold mt-4">Shop online with confidence.</h3>
+          <p class="text-gray-600 mt-2">Shop online with confidence – with 24/7 fraud monitoring and Buyer Protection on eligible purchases.</p>
+          <button class="mt-4 border text-white bg-blue-600 text-blue-600 px-4 py-2 rounded-md">Find Out More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Solutions Section -->
+  <section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold text-center">Make and receive payments with ease.</h2>
+      <p class="text-lg text-center text-gray-600 mt-4">Popular payments, happy customers.</p>
+      <div class="mt-10 flex justify-between items-center">
+        <div class="max-w-md">
+          <p class="text-gray-600">Help maximise conversion and reduce cart abandonment with a wide range of digital payment options, customisable in one account.</p>
+          <button class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-md">Optimise Checkout</button>
+        </div>
+        <img src="https://placehold.co/300x500" alt="Payment checkout screen on mobile" class="rounded-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-semibold">BayPal by the numbers.</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <i class="fas fa-users fa-2x text-blue-600"></i>
+          <p class="text-lg font-semibold mt-2">427M active accounts.</p>
+        </div>
+        <div>
+          <i class="fas fa-exchange-alt fa-2x text-blue-600"></i>
+          <p class="text-lg font-semibold mt-2">6.5B Total payment transactions.</p>
+        </div>
+        <div>
+          <i class="fas fa-dollar-sign fa-2x text-blue-600"></i>
+          <p class="text-lg font-semibold mt-2">$403.9B total payment volume.</p>
+        </div>
+        <div>
+          <i class="fas fa-thumbs-up fa-2x text-blue-600"></i>
+          <p class="text-lg font-semibold mt-2">74% increase in buyer confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-16">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-2xl font-semibold">Join the global community of BayPal users</h2>
+      <p class="text-lg mt-4">Sign up now and start sending, spending, and receiving money securely every day.</p>
+      <button class="mt-6 bg-white text-blue-900 px-6 py-2 rounded-md" onclick="window.location.href='signup.html'">Sign Up Now</button>
+    </div>
+
+    <!-- Footer Links and Terms -->
+    <div class="mt-10 border-t border-gray-700 pt-10 text-center">
+      <p class="text-sm">Terms & Conditions apply. See more details at the bottom of the website.</p>
+    </div>
+  </footer>
+</body>
+<script>
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    let currentSlide = 0;
+  
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    });
+  
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+  
+    function updateCarousel() {
+      const offset = currentSlide * -100;
+      slides.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+</html>
